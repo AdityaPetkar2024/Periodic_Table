@@ -7,7 +7,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     min-height: 100vh;
+=======
+    min-height: 100vh; /* Ensure body takes full viewport height */
+>>>>>>> e87927a2d2de4a200bd714e3fa4675c04c98afe0
 }
 
 h1 {
@@ -27,7 +31,11 @@ h1 {
 
 .search-container input {
     padding: 12px 20px;
+<<<<<<< HEAD
     width: calc(100% - 40px);
+=======
+    width: calc(100% - 40px); /* Account for padding */
+>>>>>>> e87927a2d2de4a200bd714e3fa4675c04c98afe0
     font-size: 1.1em;
     border: 1px solid #ced4da;
     border-radius: 8px;
@@ -43,8 +51,13 @@ h1 {
 
 .table-container {
     width: 100%;
+<<<<<<< HEAD
     max-width: 1100px;
     overflow-x: auto;
+=======
+    max-width: 1100px; /* Adjust max width of the table */
+    overflow-x: auto; /* Enable horizontal scrolling if table is too wide */
+>>>>>>> e87927a2d2de4a200bd714e3fa4675c04c98afe0
     padding: 10px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -54,6 +67,7 @@ h1 {
 
 .table {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(18, 58px);
     grid-template-rows: repeat(9, 58px);
     gap: 3px;
@@ -61,6 +75,17 @@ h1 {
     align-items: center;
     margin: auto;
     width: max-content;
+=======
+    /* 18 columns for the periodic table layout, fixed width for each element */
+    grid-template-columns: repeat(18, 58px); /* slightly smaller for better fit */
+    /* 9 rows: 7 for main periods, 2 for lanthanides/actinides */
+    grid-template-rows: repeat(9, 58px); /* fixed height for each element */
+    gap: 3px; /* Slightly reduced gap */
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: max-content; /* Allow grid to determine its own width */
+>>>>>>> e87927a2d2de4a200bd714e3fa4675c04c98afe0
 }
 
 .element {
@@ -68,32 +93,56 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     padding: 3px;
+=======
+    padding: 3px; /* Reduced padding */
+>>>>>>> e87927a2d2de4a200bd714e3fa4675c04c98afe0
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
     color: white;
     cursor: pointer;
+<<<<<<< HEAD
     font-size: 0.85em;
     box-sizing: border-box;
     transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, opacity 0.2s ease-in-out;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.3);
+=======
+    font-size: 0.85em; /* Smaller font size for better fit */
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, opacity 0.2s ease-in-out;
+    position: relative; /* For positioning atomic number */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for definition */
+>>>>>>> e87927a2d2de4a200bd714e3fa4675c04c98afe0
 }
 
 .element:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+<<<<<<< HEAD
     z-index: 10;
+=======
+    z-index: 10; /* Bring hovered element to front */
+>>>>>>> e87927a2d2de4a200bd714e3fa4675c04c98afe0
 }
 
 .element.hidden {
     opacity: 0;
+<<<<<<< HEAD
     pointer-events: none;
 }
 
 .element .atomic-number {
     font-size: 0.6em;
+=======
+    pointer-events: none; /* Disable clicks on hidden elements */
+}
+
+.element .atomic-number {
+    font-size: 0.6em; /* Smaller atomic number */
+>>>>>>> e87927a2d2de4a200bd714e3fa4675c04c98afe0
     position: absolute;
     top: 2px;
     left: 2px;
@@ -101,6 +150,7 @@ h1 {
 }
 
 .element .symbol {
+<<<<<<< HEAD
     font-size: 1.6em;
     line-height: 1;
     margin-top: -3px;
@@ -132,3 +182,36 @@ h1 {
 }
 .empty-cell.group-period-2-3 { grid-column: 3 / span 10; grid-row: 2; }
 .empty-cell.group-period-3-3 { grid-column: 3 / span 10; grid-row: 3; }
+=======
+    font-size: 1.6em; /* Larger symbol */
+    line-height: 1;
+    margin-top: -3px; /* Adjust vertical alignment */
+}
+
+/* Color-coded by category */
+.element.alkali\ metal { background-color: #e74c3c; } /* Red */
+.element.alkaline\ earth\ metal { background-color: #f39c12; } /* Orange */
+.element.transition\ metal { background-color: #34495e; } /* Dark Blue/Grey */
+.element.post-transition\ metal { background-color: #95a5a6; } /* Grey */
+.element.metalloid { background-color: #f1c40f; color: black; } /* Yellow */
+.element.nonmetal { background-color: #2ecc71; } /* Green */
+.element.halogen { background-color: #9b59b6; } /* Purple */
+.element.noble\ gas { background-color: #3498db; } /* Blue */
+.element.lanthanide { background-color: #1abc9c; } /* Teal */
+.element.actinide { background-color: #e67e22; } /* Dark Orange */
+.element.unknown\,\ probably\ transition\ metal { background-color: #7f8c8d; } /* Darker Grey */
+.element.unknown\,\ probably\ post-transition\ metal { background-color: #bdc3c7; } /* Lighter Grey */
+.element.unknown\,\ probably\ halogen { background-color: #c0392b; } /* Darker Red */
+.element.unknown\,\ probably\ noble\ gas { background-color: #2980b9; } /* Darker Blue */
+
+/* Empty grid cells for proper table shape */
+/* These are placeholders to maintain grid structure */
+.empty-cell {
+    grid-column: span 1; /* Placeholder */
+    grid-row: span 1;
+    background-color: transparent; /* Make them invisible */
+}
+/* Specific empty cells for the periodic table gaps */
+.empty-cell.group-period-2-3 { grid-column: 3 / span 10; grid-row: 2; }
+.empty-cell.group-period-3-3 { grid-column: 3 / span 10; grid-row: 3; }
+>>>>>>> e87927a2d2de4a200bd714e3fa4675c04c98afe0

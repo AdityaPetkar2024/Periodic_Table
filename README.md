@@ -1,0 +1,1 @@
+I have used fast api and html and css and javascript to make my python project for 2nd sem, in this you can view a periodic table arranged like your normal one, you can check the properties by clicking them, also you can search for any particular element based on the symbol name and atomic number or full name of the element
