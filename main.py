@@ -8,16 +8,16 @@ import os
 
 app = FastAPI()
 
-# Mount static files (CSS, JS)
+ 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Set up Jinja2 templates
+ 
 templates = Jinja2Templates(directory="templates")
 
-# Load periodic table data directly using csv module
+ 
 periodic_table_data = []
 try:
-    # Get the directory of the current script (main.py)
+  
     script_dir = os.path.dirname(__file__)
     csv_file_path = os.path.join(script_dir, "periodictable_data.csv")
 
@@ -63,7 +63,8 @@ async def read_root(request: Request):
 
 @app.get("/api/elements")
 async def get_elements():
-    # Return the loaded list of dictionaries
+  
+
     return periodic_table_data
 =======
 from fastapi import FastAPI, Request
@@ -81,7 +82,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Mount static files (CSS, JS)
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
 
-# Set up Jinja2 templates
+ 
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
 
 # Define the path to the CSV file
